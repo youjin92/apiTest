@@ -1,0 +1,10 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: apiTest
+
+config:
+  swagger:
+    swagger-group-type: default
