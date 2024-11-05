@@ -51,7 +51,3 @@ jar {
 		)
 	}
 }
-
-application {
-	mainClass = 'com.jyou.apiTest.ApiTestApplication'
-}
