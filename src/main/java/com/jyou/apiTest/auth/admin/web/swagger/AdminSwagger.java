@@ -1,6 +1,6 @@
 package com.jyou.apiTest.auth.admin.web.swagger;
 
-import com.jyou.apiTest.auth.admin.domain.User;
+import com.jyou.apiTest.auth.admin.domain.Admin;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;
@@ -12,7 +12,7 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 public interface AdminSwagger {
     @Operation(summary = "유저 전체 출력")
     @ApiResponses(value = {
-            @ApiResponse(responseCode = "200", description = "성공", content = @Content(schema = @Schema(implementation = User.class))),
+            @ApiResponse(responseCode = "200", description = "성공", content = @Content(schema = @Schema(implementation = Admin.class))),
             @ApiResponse(responseCode = "400", description = "실패 - 요청 파라미터가 유효하지 않음", content = @Content(schema = @Schema(type = "string", example = "fail"))),
     })
     String hello(long a);

@@ -6,18 +6,15 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
-import java.util.ArrayList;
-import java.util.List;
-
 @Entity
 @Builder
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
-public class User {
+public class Admin {
     @Id
     @GeneratedValue
-    @Column(name="user_id")
+    @Column(name="admin_id")
     private Long id;
     private String loginId;
     private String password;

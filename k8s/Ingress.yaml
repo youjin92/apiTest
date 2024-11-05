@@ -1,0 +1,24 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: api-ingress
+  namespace: apiTest  # 네임스페이스 지정
+  annotations:
+    kubernetes.io/ingress.class: "nginx"  # nginx 인그레스 컨트롤러 사용
+    cert-manager.io/cluster-issuer: "letsencrypt-prod"  # cert-manager를 통한 인증서 발급
+spec:
+  rules:
+    - host: mbsp.kro.kr
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: api-service
+                port:
+                  number: 80
+  tls:
+    - hosts:
+        - mbsp.kro.kr
+      secretName: api-tls-secret  # cert-manager가 생성할 TLS 인증서 비밀 이름

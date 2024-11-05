@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: api-deployment
+  namespace: apiTest  # 네임스페이스 지정
+  labels:
+    app: api-service
+spec:
+  replicas: 2  # 애플리케이션 복제본 수 설정
+  selector:
+    matchLabels:
+      app: api-service
+  template:
+    metadata:
+      labels:
+        app: api-service
+    spec:
+      containers:
+        - name: api-container
+          image: ghcr.io/youjin92/apitest:v1.0.1  # GHCR 이미지 경로
+          ports:
+            - containerPort: 8080
