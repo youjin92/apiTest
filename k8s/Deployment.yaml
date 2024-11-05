@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: api-deployment
-  namespace: apiTest  # 네임스페이스 지정
+  namespace: api-test  # 네임스페이스 지정
   labels:
     app: api-service
 spec:
