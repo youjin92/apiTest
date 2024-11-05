@@ -8,7 +8,7 @@ spec:
     app: api-service
   ports:
     - protocol: TCP
-      port: 80          # 컨테이너의 포트
-      targetPort: 8080   # 컨테이너 내부 포트
-      nodePort: 30080    # 외부에서 접근할 포트
-  type: NodePort          # LoadBalancer 대신 NodePort 사용
+      port: 80
+      targetPort: 8080
+      nodePort: 30080
+  type: NodePort
