@@ -43,3 +43,11 @@ dependencies {
 tasks.named('test') {
 	useJUnitPlatform()
 }
+
+jar {
+	manifest {
+		attributes(
+				'Main-Class': 'com.jyou.apiTest'  // 메인 클래스 경로로 변경
+		)
+	}
+}
