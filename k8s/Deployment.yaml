@@ -17,6 +17,6 @@ spec:
     spec:
       containers:
         - name: api-container
-          image: ghcr.io/youjin92/apitest:v1.0.7  # GHCR 이미지 경로
+          image: ghcr.io/youjin92/apitest:v1.0.8  # GHCR 이미지 경로
           ports:
             - containerPort: 8080
