@@ -5,15 +5,10 @@ metadata:
 spec:
   acme:
     server: https://acme-v02.api.letsencrypt.org/directory
-    email: jyoo4056@gmail.com
+    email: jyoo4056@gmail.com  # 인증서 갱신 알림을 받을 이메일
     privateKeySecretRef:
       name: letsencrypt-prod
     solvers:
       - http01:
           ingress:
             class: nginx
-            # 추가 가능한 annotation 예시
-            podTemplate:
-              metadata:
-                annotations:
-                  nginx.ingress.kubernetes.io/whitelist-source-range: "0.0.0.0/0"
