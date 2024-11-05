@@ -6,7 +6,7 @@ for /F "tokens=* delims=" %%x in (.env) do (
 )
 
 set GITHUB_USERNAME=youjin92
-set IMAGE_NAME=ghcr.io/%GITHUB_USERNAME%/apitest:v1.0.6
+set IMAGE_NAME=ghcr.io/%GITHUB_USERNAME%/apitest:v1.0.7
 
 echo Logging in to GitHub Container Registry...
 echo %GITHUB_TOKEN% | docker login ghcr.io -u %GITHUB_USERNAME% --password-stdin
